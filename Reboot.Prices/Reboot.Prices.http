@@ -1,0 +1,6 @@
+@Reboot.Prices_HostAddress = http://localhost:5050
+
+GET {{Reboot.Prices_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

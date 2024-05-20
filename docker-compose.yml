@@ -1,0 +1,6 @@
+﻿services:
+  reboot.prices:
+    image: reboot.prices
+    build:
+      context: .
+      dockerfile: Reboot.Prices/Dockerfile

@@ -1,0 +1,6 @@
+@Reboot.API_HostAddress = http://localhost:5279
+
+GET {{Reboot.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
