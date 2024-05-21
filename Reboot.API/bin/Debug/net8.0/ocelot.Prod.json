@@ -9,7 +9,7 @@
           "Port": 8001
         }
       ],
-      "UpstreamPathTemplate": "/order/{catchAll8001}",
+      "UpstreamPathTemplate": "/prices/{catchAll8001}",
       "UpstreamHttpMethod": [
         "GET",
         "POST"

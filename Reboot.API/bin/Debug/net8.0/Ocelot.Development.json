@@ -1,22 +1,7 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/order/{catchAll8003}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8003
-        }
-      ],
-      "UpstreamPathTemplate": "/order/{catchAll8003}",
-      "UpstreamHttpMethod": [
-        "GET",
-        "POST"
-      ]
-    },
-    {
-      "DownstreamPathTemplate": "/api/categories/{catchAll8001}",
+      "DownstreamPathTemplate": "/api/prices/{catchAll8001}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -24,22 +9,7 @@
           "Port": 8001
         }
       ],
-      "UpstreamPathTemplate": "/categories/{catchAll8001}",
-      "UpstreamHttpMethod": [
-        "GET",
-        "POST"
-      ]
-    },
-    {
-      "DownstreamPathTemplate": "/api/products/{catchAll8004}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 8004
-        }
-      ],
-      "UpstreamPathTemplate": "/products/{catchAll8004}",
+      "UpstreamPathTemplate": "/prices/{catchAll8001}",
       "UpstreamHttpMethod": [
         "GET",
         "POST"

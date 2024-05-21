@@ -16,3 +16,8 @@
       - ASPNETCORE_URLS=http://0.0.0.0:8000
       - ASPNETCORE_ENVIRONMENT=Prod
     restart: always
+
+networks:
+  reboot-network:
+    name: reboot-network
+    external: true
