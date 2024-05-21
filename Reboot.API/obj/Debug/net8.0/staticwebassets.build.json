@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X/IJOgJypYLJkkTMTvIftmG83i2xW4okjGWXvvKaH2I=",
+  "Source": "Reboot.API",
+  "BasePath": "_content/Reboot.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -5,6 +5,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F3FA633A-0D45-4B00-96B1-1FD451772F16}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reboot.DB", "Reboot.DB\Reboot.DB.csproj", "{2874AA8D-1977-4BDB-948C-1832F3F8F8A8}"

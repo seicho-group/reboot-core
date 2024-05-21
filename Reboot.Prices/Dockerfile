@@ -1,23 +1,16 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER $APP_UID
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 8001
+ENV ASPNETCORE_HTTP_PORTS 8001
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Reboot.Prices/Reboot.Prices.csproj", "Reboot.Prices/"]
-RUN dotnet restore "Reboot.Prices/Reboot.Prices.csproj"
-COPY . .
-WORKDIR "/src/Reboot.Prices"
-RUN dotnet build "Reboot.Prices.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "Reboot.Prices.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+COPY ../ .
+RUN dotnet publish -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "Reboot.Prices.dll"]

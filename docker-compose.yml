@@ -1,6 +1,23 @@
 ﻿services:
   reboot.prices:
-    image: reboot.prices
-    build:
-      context: .
-      dockerfile: Reboot.Prices/Dockerfile
+    image: seichocorp/reboot-core-prices:latest
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8001
+      - ASPNETCORE_ENVIRONMENT=Prod
+    ports:
+      - "8001:8001"
+    restart: always
+
+  reboot.api:
+    image: seichocorp/reboot-core-api:latest
+    ports:
+      - "80:8000"
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8000
+      - ASPNETCORE_ENVIRONMENT=Prod
+    restart: always
+
+networks:
+  reboot-network:
+    name: reboot-network
+    external: true

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reboot.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0d9d6816cc255d378e27b92b230fddb0bd6b022")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reboot.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reboot.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
