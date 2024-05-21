@@ -1,0 +1,22 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/prices/{catchAll8001}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reboot.prices",
+          "Port": 8001
+        }
+      ],
+      "UpstreamPathTemplate": "/order/{catchAll8001}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8000"
+  }
+}

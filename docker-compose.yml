@@ -4,3 +4,9 @@
     build:
       context: .
       dockerfile: Reboot.Prices/Dockerfile
+
+  reboot.api:
+    image: reboot.api
+    build:
+      context: .
+      dockerfile: Reboot.API/Dockerfile
