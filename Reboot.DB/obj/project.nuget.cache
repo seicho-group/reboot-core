@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z6eoIfdu2tJg2ACtdmYN/jIgxJqIg0JRIrgFP0REt3W+MKGso0S2Bq/UmrDbN3QeZxZ9bHvhft5g3DAUKdVB5A==",
+  "dgSpecHash": "ZyAKDcBsyke3OkqAEJQpQjLmuvlfWYhZdKQg7qwZwlI0+VeOU09hyNRkGtfvz5SX50qM1Qz467X3vhrrTN4fpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\RiderProjects\\reboot-core\\Reboot.DB\\Reboot.DB.csproj",
+  "projectFilePath": "/Users/fedotovskih/RiderProjects/reboot-core/Reboot.DB/Reboot.DB.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
