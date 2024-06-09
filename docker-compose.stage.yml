@@ -4,6 +4,8 @@
     environment:
       - ASPNETCORE_HTTP_PORTS=8001
       - ASPNETCORE_ENVIRONMENT=Stage
+    env_file:
+      - .env
     ports:
       - "8101:8001"
     restart: always
@@ -15,6 +17,8 @@
     environment:
       - ASPNETCORE_URLS=http://0.0.0.0:8000
       - ASPNETCORE_ENVIRONMENT=Stage
+    env_file:
+      - .env
     restart: always
     
   reboot.db.stage:

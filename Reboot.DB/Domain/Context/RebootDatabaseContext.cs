@@ -8,7 +8,7 @@ public class RebootDatabaseContext : DbContext
 {
     public RebootDatabaseContext()
     {
-        Env.TraversePath().Load(".env");
+        Env.TraversePath().Load();
     }
     
     public DbSet<PhoneFabric> PhoneFabrics { get; set; }
