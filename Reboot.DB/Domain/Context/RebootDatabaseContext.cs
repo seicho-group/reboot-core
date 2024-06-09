@@ -16,9 +16,10 @@ public class RebootDatabaseContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+        var port = env == "Prod" ? "5432" : "5433";
         optionsBuilder.UseNpgsql($"" +
                                  $"Host={Environment.GetEnvironmentVariable("HOST")};" +
-                                 $"Port=5433;" +
+                                 $"Port={port};" +
                                  $"Database={Environment.GetEnvironmentVariable("POSTGRES_DB")};" +
                                  $"Username={Environment.GetEnvironmentVariable("POSTGRES_USER")};" +
                                  $"Password={Environment.GetEnvironmentVariable("POSTGRES_PASSWORD")}");
