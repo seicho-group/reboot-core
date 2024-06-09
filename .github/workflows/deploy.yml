@@ -53,11 +53,6 @@ jobs:
           cat docker-compose.yml | envsubst > docker-compose-secret.yml
       - name: copy docker compose config
         run: scp docker-compose-secret.yml ${{ secrets.USER }}@${{ secrets.HOST }}:docker-compose.yml
-      - name: create .env
-        run: |
-          cat .env | envsubst > .env
-      - name: copy .env
-        run: scp .env ${{ secrets.USER }}@${{ secrets.HOST }}:.env
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
@@ -67,4 +62,4 @@ jobs:
           script: |
             sudo docker-compose pull
             docker network inspect reboot-network || docker network create reboot-network
-            sudo docker-compose up -d
+            sudo docker-compose up -d 
