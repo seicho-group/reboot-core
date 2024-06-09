@@ -92,3 +92,11 @@ C:/Users/user/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Ocelot.Devel
 /Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/obj/Debug/net8.0/Reboot.API.pdb
 /Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/obj/Debug/net8.0/Reboot.API.genruntimeconfig.cache
 /Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/obj/Debug/net8.0/ref/Reboot.API.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Ocelot.Stage.json
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Npgsql.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Reboot.DB.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.API/bin/Debug/net8.0/Reboot.DB.pdb

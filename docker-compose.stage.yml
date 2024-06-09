@@ -1,0 +1,38 @@
+﻿services:
+  reboot.prices.stage:
+    image: seichocorp/reboot-core-prices-stage:latest
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8001
+      - ASPNETCORE_ENVIRONMENT=Stage
+    ports:
+      - "8101:8001"
+    restart: always
+
+  reboot.api.stage:
+    image: seichocorp/reboot-core-api-stage:latest
+    ports:
+      - "81:8000"
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8000
+      - ASPNETCORE_ENVIRONMENT=Stage
+    restart: always
+    
+  reboot.db.stage:
+    image: postgres:15
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - '5433:5432'
+    volumes:
+      - db.stage:/var/lib/postgresql/data
+      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+
+volumes:
+  db.stage:
+    driver: local
+
+networks:
+  reboot-network:
+    name: reboot-network
+    external: true

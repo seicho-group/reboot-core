@@ -1,5 +1,6 @@
 ﻿using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Reboot.DB.Domain.Context;
 
 namespace Reboot.API;
 
@@ -9,6 +10,7 @@ public class Startup(IConfiguration configuration)
 
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddTransient<RebootDatabaseContext>();
         services.AddCors(options =>
         {
             options.AddPolicy("*", builder => builder

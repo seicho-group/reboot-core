@@ -1,4 +1,6 @@
-﻿namespace Reboot.Prices;
+﻿using Reboot.DB.Domain.Context;
+
+namespace Reboot.Prices;
 
 public class Startup(IConfiguration configuration)
 {
@@ -6,6 +8,7 @@ public class Startup(IConfiguration configuration)
 
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddTransient<RebootDatabaseContext>();
         services.AddCors(options =>
         {
             options.AddPolicy("*", builder => builder

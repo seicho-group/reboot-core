@@ -1,0 +1,65 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build_and_push_to_docker_hub:
+    name: Build and push images to docker hub
+    runs-on: ubuntu-latest
+    environment: reboot-prod
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          buildkitd-flags: --debug
+      - name: Login to Docker
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Push Prices to Docker Hub
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          context: .
+          file: ./Reboot.Prices/Dockerfile
+          tags: seichocorp/reboot-core-prices:latest
+
+      - name: Push API to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          context: .
+          file: ./Reboot.API/Dockerfile
+          tags: seichocorp/reboot-core-api:latest
+  deploy:
+    name: Create compose-file, pull all images and deploy containers
+    runs-on: ubuntu-latest
+    environment: reboot-prod
+    needs: [ build_and_push_to_docker_hub ]
+    steps:
+      - uses: actions/checkout@v4
+      - name: install ssh keys
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.HOST }} > ~/.ssh/known_hosts
+      - name: create docker compose config
+        run: |
+          cat docker-compose.yml | envsubst > docker-compose-secret.yml
+      - name: copy docker compose config
+        run: scp docker-compose-secret.yml ${{ secrets.USER }}@${{ secrets.HOST }}:docker-compose.yml
+      - name: executing remote ssh commands to deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo docker-compose pull
+            docker network inspect reboot-network || docker network create reboot-network
+            sudo docker-compose up -d 
