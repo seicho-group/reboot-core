@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ dev ]
 
 jobs:
   build_and_push_to_docker_hub:
@@ -27,7 +27,7 @@ jobs:
           push: true
           context: .
           file: ./Reboot.Prices/Dockerfile
-          tags: seichocorp/reboot-core-prices-stage:latest
+          tags: seichocorp/reboot-core-prices:latest
 
       - name: Push API to Docker Hub
         uses: docker/build-push-action@v2
@@ -35,7 +35,7 @@ jobs:
           push: true
           context: .
           file: ./Reboot.API/Dockerfile
-          tags: seichocorp/reboot-core-api-stage:latest
+          tags: seichocorp/reboot-core-api:latest
   deploy:
     name: Create compose-file, pull all images and deploy containers
     runs-on: ubuntu-latest
@@ -50,9 +50,9 @@ jobs:
           ssh-keyscan -H ${{ secrets.HOST }} > ~/.ssh/known_hosts
       - name: create docker compose config
         run: |
-          cat docker-compose.stage.yml | envsubst > docker-compose-secret.yml
+          cat docker-compose.yml | envsubst > docker-compose-secret.yml
       - name: copy docker compose config
-        run: scp docker-compose-secret.yml ${{ secrets.USER }}@${{ secrets.HOST }}:docker-compose.stage.yml
+        run: scp docker-compose-secret.yml ${{ secrets.USER }}@${{ secrets.HOST }}:docker-compose.yml
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
@@ -60,6 +60,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker-compose -f docker-compose.stage.yml pull
+            sudo docker-compose pull
             docker network inspect reboot-network || docker network create reboot-network
-            sudo docker-compose -f docker-compose.stage.yml up -d 
+            sudo docker-compose up -d 
