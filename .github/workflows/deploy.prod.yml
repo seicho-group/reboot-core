@@ -28,6 +28,13 @@ jobs:
           context: .
           file: ./Reboot.Prices/Dockerfile
           tags: seichocorp/reboot-core-prices:latest
+      - name: Push Entities to Docker Hub
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          context: .
+          file: ./Reboot.Entities/Dockerfile
+          tags: seichocorp/reboot-core-entities:latest
 
       - name: Push API to Docker Hub
         uses: docker/build-push-action@v2
