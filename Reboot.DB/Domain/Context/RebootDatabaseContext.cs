@@ -13,6 +13,11 @@ public class RebootDatabaseContext : DbContext
     
     public DbSet<PhoneFabric> PhoneFabrics { get; set; }
     public DbSet<PhoneSeries> PhoneSeries { get; set; }
+    public DbSet<PhoneModel> PhoneModels { get; set; }
+    public DbSet<PhoneModelModification> PhoneModelModifications { get; set; }
+    public DbSet<Offer> Offers { get; set; }
+    public DbSet<OfferPrice> OfferPrices { get; set; }
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");

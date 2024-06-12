@@ -2,10 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Reboot.DB.Domain.Entities;
 
-public class PhoneFabric
+public class PhoneModel
 {
     [Key]
     public required Guid Id { get; set; }
     public required string Name { get; set; }
-    public string? ProducerCountry { get; set; }
-};
+    public required PhoneSeries Series { get; set; }
+}

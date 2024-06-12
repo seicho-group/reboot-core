@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "http": {
+    "Reboot.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
