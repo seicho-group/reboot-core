@@ -11,7 +11,7 @@
     restart: always
     
   reboot.entities:
-    image: seichocorp/reboot-core-entities:latest
+    image: seichocorp/reboot-core-entities-stage:latest
     ports:
       - "8102:8002"
     environment:
