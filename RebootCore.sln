@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reboot.DB", "Reboot.DB\Rebo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reboot.API", "Reboot.API\Reboot.API.csproj", "{EE5C745C-136C-452D-A36A-B2248F4B9D23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reboot.Entities", "Reboot.Entities\Reboot.Entities.csproj", "{90F697B0-2B9B-4CE9-95CA-C163BDD57479}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +37,9 @@ Global
 		{EE5C745C-136C-452D-A36A-B2248F4B9D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE5C745C-136C-452D-A36A-B2248F4B9D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE5C745C-136C-452D-A36A-B2248F4B9D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F697B0-2B9B-4CE9-95CA-C163BDD57479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F697B0-2B9B-4CE9-95CA-C163BDD57479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F697B0-2B9B-4CE9-95CA-C163BDD57479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F697B0-2B9B-4CE9-95CA-C163BDD57479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

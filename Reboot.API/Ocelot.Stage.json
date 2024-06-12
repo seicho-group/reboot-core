@@ -6,10 +6,25 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "reboot.prices.stage",
-          "Port": 8001
+          "Port": 8101
         }
       ],
       "UpstreamPathTemplate": "/prices/{catchAll8001}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/entities/{catchAll8001}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reboot.entities",
+          "Port": 8102
+        }
+      ],
+      "UpstreamPathTemplate": "/entities/{catchAll8001}",
       "UpstreamHttpMethod": [
         "GET",
         "POST"

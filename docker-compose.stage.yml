@@ -2,12 +2,23 @@
   reboot.prices.stage:
     image: seichocorp/reboot-core-prices-stage:latest
     environment:
-      - ASPNETCORE_HTTP_PORTS=8001
+      - ASPNETCORE_HTTP_PORTS=8101
       - ASPNETCORE_ENVIRONMENT=Stage
     env_file:
       - .env
     ports:
       - "8101:8001"
+    restart: always
+    
+  reboot.entities:
+    image: seichocorp/reboot-core-entities:latest
+    ports:
+      - "8102:8002"
+    environment:
+      - ASPNETCORE_URLS=http://0.0.0.0:8002
+      - ASPNETCORE_ENVIRONMENT=Stage
+    env_file:
+      - .env.prod
     restart: always
 
   reboot.api.stage:

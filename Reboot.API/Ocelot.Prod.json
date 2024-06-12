@@ -14,6 +14,21 @@
         "GET",
         "POST"
       ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/entities/{catchAll8001}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reboot.entities",
+          "Port": 8002
+        }
+      ],
+      "UpstreamPathTemplate": "/entities/{catchAll8001}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ]
     }
   ],
   "GlobalConfiguration": {

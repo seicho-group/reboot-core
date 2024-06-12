@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/8LHDbaDgFl04SC5Ka5cynla6uTJ1V4jspnV3bBrhecx/K/ffaZc2mohKSLNIlZl2ITlgkszVx7QMkEaLRSDJQ==",
+  "dgSpecHash": "FJGLcVEGdAI9NMwuTnUH6CBN/c0QGR5e9hq/F6fIvfVmVy2/coXKk4tR0XRsaxvye8iF+C0Pt+Afm1I7T7mCkw==",
   "success": true,
   "projectFilePath": "/Users/fedotovskih/RiderProjects/reboot-core/Reboot.Prices/Reboot.Prices.csproj",
   "expectedPackageFiles": [
     "/Users/fedotovskih/.nuget/packages/dotnetenv/3.0.0/dotnetenv.3.0.0.nupkg.sha512",
+    "/Users/fedotovskih/.nuget/packages/mediatr/12.3.0/mediatr.12.3.0.nupkg.sha512",
+    "/Users/fedotovskih/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/fedotovskih/.nuget/packages/microsoft.aspnetcore.openapi/8.0.3/microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
     "/Users/fedotovskih/.nuget/packages/microsoft.entityframeworkcore/8.0.4/microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "/Users/fedotovskih/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.4/microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",

@@ -21,6 +21,7 @@ public class RebootDatabaseContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+        //todo: вынести в окружение
         var port = env == "Prod" ? "5432" : "5433";
         optionsBuilder.UseNpgsql($"" +
                                  $"Host={Environment.GetEnvironmentVariable("HOST")};" +
