@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reboot.DB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a2619677363374e9ec2e2548835a6f8c65a6127")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a167786b9eee9fa5896ddd37c63f6e25daf4067d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reboot.DB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reboot.DB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

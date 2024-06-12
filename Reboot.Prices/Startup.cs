@@ -17,6 +17,8 @@ public class Startup(IConfiguration configuration)
                 .AllowAnyHeader());
         });
 
+        services
+            .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
         services.AddControllers();
     }
 
@@ -28,7 +30,7 @@ public class Startup(IConfiguration configuration)
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseCors("*");
-
+        
         app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }
 }

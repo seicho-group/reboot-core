@@ -15,7 +15,9 @@ public class Startup(IConfiguration configuration)
                 .AllowAnyMethod()
                 .AllowAnyHeader());
         });
-
+        
+        services
+            .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
         services.AddControllers();
     }
 

@@ -75,3 +75,5 @@ C:/Users/user/RiderProjects/reboot-core/Reboot.Prices/obj/Debug/net8.0/ref/Reboo
 /Users/fedotovskih/RiderProjects/reboot-core/Reboot.Prices/obj/Debug/net8.0/Reboot.Prices.pdb
 /Users/fedotovskih/RiderProjects/reboot-core/Reboot.Prices/obj/Debug/net8.0/Reboot.Prices.genruntimeconfig.cache
 /Users/fedotovskih/RiderProjects/reboot-core/Reboot.Prices/obj/Debug/net8.0/ref/Reboot.Prices.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.Prices/bin/Debug/net8.0/MediatR.dll
+/Users/fedotovskih/RiderProjects/reboot-core/Reboot.Prices/bin/Debug/net8.0/MediatR.Contracts.dll
